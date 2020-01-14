@@ -6,4 +6,4 @@ Get-ChildItem $source -Filter "*.jpg" -Recurse | `
         $targetFile = $target + $_.FullName.Substring($source.Length);
         New-Item -ItemType File -Path $targetFile -Force;
         Copy-Item $_.FullName -Destination $targetFile
-        }
+        } 
